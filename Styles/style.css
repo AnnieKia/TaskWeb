@@ -1,0 +1,85 @@
+
+
+.myHeader {
+  border: 5px outset BlanchedAlmond;
+  background-color: #fffef0;
+  text-align: center;
+
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+@media (max-width: 786px){
+
+  .myHeader{
+    border: black;
+    background-color: Gainsboro;
+  }
+  *{
+    color: black;
+  }
+
+}
+
+
+
+@media (min-width: 786px){
+body {
+position: absolute;
+width: 75%;
+min-height: calc((1vw + 1vh) * 75);
+/* center page */
+top: 0%; left: 50%; transform: translate(-50%, 0);
+margin: 2em 0;
+padding: 4em;
+box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+background-color: #fffef0;
+}
+
+
+}
+
+h1 {
+  font-size: 30
+}
+
+
+
+/* font stuff not important */
+@font-face {
+  font-family: 'opendyslexic';
+  src: url('../Fonts/OpenDyslexic-Regular.otf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'opendyslexic';
+  src: url('../Fonts/OpenDyslexic-Italic.otf');
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'opendyslexic';
+  src: url('../Fonts/OpenDyslexic-Bold.otf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'opendyslexic';
+  src: url('../Fonts/OpenDyslexic-BoldItalic.otf');
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+* {
+  font-size:15px;
+  line-height:200%;
+      color: #191A42;
+  font-family:opendyslexic !important;
+}
