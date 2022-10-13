@@ -17,17 +17,22 @@ html{
     height: 100%;
     width: 100%;
 }
+@media (min-width:786px){
+  body{
+    position: absolute;
+    width:55%;
+    height:75%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+}
 body{
   border: 5px outset white;
   margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
   padding:10px;
-  width:55%;
-  height:75%;
+
   background-color: #5CDB95;
 
 }
@@ -55,11 +60,15 @@ text-decoration: none;
 display: inline-block;
 font-size: 16px;
 }
+
 @media (max-width: 786px){
 
   .myHeader{
     border: black;
     background-color: Gainsboro;
+  }
+  body{
+
   }
   *{
     color: black;
