@@ -23,9 +23,9 @@ addTaskButton.addEventListener("click", (e) => {
     taskList = JSON.parse(tasks);
   }
   const task = {
-    "name": taskName.value,
-    "priority": taskPriority.value,
-    "status": "pending"
+    name: taskName.value,
+    priority: taskPriority.value,
+    status: "pending" // or completed
   };
   taskList = taskList || [];
   taskList.push(task);
@@ -43,13 +43,32 @@ function updateTable(){
   let html = "";
   taskList.forEach((task, i) => {
     html+= `<div class='task'>
-    <input id="task${i}" type="text" class="text" value="${task["name"]} | Priority: ${task["priority"]}" readonly />
-    <button onclick='completeTask(${i})' class = 'complete'>Complete</button>
+    <input id="task${i}" type="text" class="myText" value="${task.name} | Priority: ${task.priority}" readonly />
+    <button onclick='completeTask(${i})' class = 'myButton'>Complete</button>
     </div>`
   });
   taskBox.innerHTML = html;
-}
+  taskList.forEach((task, i) => {
+    if(task.status == "completed"){
+      document.getElementById(`task${i}`).classList.add('completed');
+    }
+  });
 
+}
+function clearTask(){
+  localStorage.removeItem("tasks");
+  updateTable();
+}
 function completeTask(ind){
-  document.getElementById('task${ind}').classList.add('completed')
+  document.getElementById(`task${ind}`).classList.add('completed');
+
+  taskList.forEach((task, i) => {
+    if(i == ind){
+      task.status = "completed";
+    }
+    localStorage.setItem("tasks", JSON.stringify(taskList));
+
+  });
+
+
 }

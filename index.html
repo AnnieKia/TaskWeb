@@ -2,15 +2,17 @@
 <html>
 
   <head>
-    <link rel="stylesheet" href="Styles/style.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="Styles/style.css">
+
 <title>Task Manager</title>
 </head>
 <body>
+
 <div class="myHeader">
 <h1>Task Manager</h1>
 </div>
@@ -22,11 +24,12 @@
       <h2>Add Task</h2>
       <form id="task-form">
         <label for="task-name">Task name:</label><br>
-        <input type="text" id="tname"><br>
+        <input type="text" id="tname" class = "myText"><br>
         <label for="task-prio">Task Priority:</label><br>
-        <input type="text" id="tprio">
-        <button id="add">Add Task</button>
+        <input type="text" id="tprio" class = "myText">
+        <button id="add" class="myButton">Add Task</button>
       </form>
+      <button id="delete" onclick="clearTask()" class="myButton">Clear Tasks</button>
       </div>
       <div class="col-sm col-md">
         <section class="task-list">
@@ -34,7 +37,7 @@
         <div id = "tasks">
 
 
-          <!-- really just a template.
+          <!-- really just a placeholder for values.
           Helps with the thought process
 
 
@@ -51,7 +54,9 @@
 
               </div>
               </div>
-              </div>
+            </div>
+          </div>
+
 <script src="Scripts/taskTable.js"></script>
 </body>
 </html>
