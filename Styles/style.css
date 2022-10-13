@@ -66,12 +66,8 @@ font-size: 16px;
 
 @media (max-width: 785px){
 
-  .myHeader{
-    border: black;
-    background-color: Gainsboro;
-  }
   body{
-
+    min-height: 100vh;
   }
   *{
     color: black;
