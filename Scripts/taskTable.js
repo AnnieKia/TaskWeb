@@ -40,6 +40,7 @@ function updateTable(){
   }else{
     taskList = JSON.parse(tasks);
   }
+  taskList = taskList || [];
   let html = "";
   taskList.forEach((task, i) => {
     html+= `<div class='task'>
@@ -50,6 +51,6 @@ function updateTable(){
   taskBox.innerHTML = html;
 }
 
-function completeTask(ind){
-  document.getElementById('task${ind}').classList.add('completed')
+function completeTask(i){
+  document.getElementById(`task${i}`).classList.add('completed');
 }
